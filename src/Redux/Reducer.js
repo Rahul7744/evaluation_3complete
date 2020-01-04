@@ -38,6 +38,9 @@ const addingData = (state = initState, action) => {
              console.log('state : ',newState)
              let _data = newState.tableData.filter((e)=> e.id !== action.edit.id)
              _data.push(action.edit)
+             _data = _data.sort((a, b) => {
+                 return a.id - b.id
+             })
 
              return {
                  ...state,
