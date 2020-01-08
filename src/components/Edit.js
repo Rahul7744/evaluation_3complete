@@ -72,7 +72,7 @@ class Edit extends Component {
                                     <input type="text" className="form-control"  name="salary" value={this.state.salary} onChange={this.handleInput}/>
                                 </div>
                                 
-                                <button type="submit"  onClick={this.handleEdit}  className="btn btn-primary "> Save</button>
+                                <button type="submit"    className="btn btn-primary ">Update</button>
                                 <Link to="/home" type="submit" className="btn btn-success ml-5">Cancel</Link>
                         </form>
                         </div>

@@ -1,4 +1,4 @@
-import { act } from "react-dom/test-utils"
+
 
 const ADD_DATA = "ADD_DATA"
 const DELETE_DATA = "DELETE_DATA"
@@ -35,9 +35,10 @@ const addingData = (state = initState, action) => {
 
          case EDIT_DATA:
              let newState = {...state}
-             console.log('state : ',newState)
+           //  console.log('state : ',newState)
              let _data = newState.tableData.filter((e)=> e.id !== action.edit.id)
              _data.push(action.edit)
+             // sorting
              _data = _data.sort((a, b) => {
                  return a.id - b.id
              })
@@ -46,6 +47,7 @@ const addingData = (state = initState, action) => {
                  ...state,
                  tableData: _data
              } 
+
 
         default:
             return state

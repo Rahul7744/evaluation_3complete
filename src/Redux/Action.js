@@ -18,8 +18,6 @@ const addData = (e) => {
             // location_n:e.location_n
     }
 
-    
-    
 }
 
 const removeData = (e) => {
